@@ -1,14 +1,37 @@
-import { useEffect, useState } from 'react'
 import './App.css'
-import Navbar from './componants/Navbar'
-import Categories from './componants/Categories'
+import Home from './componants/Home'
+import { RouterProvider, createBrowserRouter } from 'react-router-dom';
+import Cart from './componants/Cart';
+import Signup from './componants/Signup';
+import Signin from './componants/signin';
+const router = createBrowserRouter([
+  {
+  path: '/',
+  element: <Home/>,
+  children:[
+    {
+      path: '/cart',
+      element: <Cart/>
+    },
+    {
+      path: "/signup",
+      element: <Signup/>
+    },
+    {
+      path: "/signin",
+      element: <Signin/>
+    },
+  ]
+  },
+  
+]);
+
 
 function App() {
 
   return (
     <>
-     <Navbar/>
-      <Categories/>
+     <RouterProvider router={router}/>
     </>
   )
 }

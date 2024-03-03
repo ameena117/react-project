@@ -1,7 +1,8 @@
-import React from 'react'
 
-export const cart = () => {
+function Cart() {
   return (
     <div>cart</div>
   )
 }
+
+export default Cart

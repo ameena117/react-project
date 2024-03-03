@@ -1,9 +1,9 @@
 import React from 'react'
 
-const Navbar = () => {
+function Navbar() {
   return (
     <>
-        <div className="navbar">
+      <div className="navbar">
         <div className="nav-item logo">
           <p>React Project</p>
         </div>
@@ -14,8 +14,8 @@ const Navbar = () => {
           <a className="list-item">Cart</a>
         </div>
         <div className="nav-item buttons">
-          <a href="" className="nav-item-btn log">Signin</a>
-          <a href="" className="nav-item-btn reg">Signup</a>
+          <a className="nav-item-btn log">Signin</a>
+          <a className="nav-item-btn reg">Signup</a>
         </div>
       </div>
     </>

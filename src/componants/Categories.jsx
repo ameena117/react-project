@@ -1,25 +1,25 @@
 import React, { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom';
 
 const Categories = () => {
     const [categories, setCategories] = useState([]);
     const getCategories = async () => {
-        const resp = await fetch('https://ecommerce-node4.vercel.app/categories/active?page=1&limit=10');
+        const resp = await fetch('https://ecommerce-node4.vercel.app/categories/active?page=1&limit=100');
         const data = await resp.json();
         setCategories(data.categories);
-        console.log(categories);
+        // console.log(categories);
     }
 
     useEffect(() => {
         getCategories();
     }, []);
-
     return (
         <div>
             <div className="categories">
                 {categories.map(category => (
-                    <div className="category" key={category._id}>
-                        <img src={category.image.secure_url} alt={category.name} width={"55px"}/> 
-                    </div>
+                    <Link to={`./Products/${category._id}`} className="category" key={category._id}>
+                        <img src={category.image.secure_url} alt={category.name} width={"55px"} />
+                    </Link>
                 ))}
             </div>
         </div>

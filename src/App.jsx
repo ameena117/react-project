@@ -7,6 +7,8 @@ import Signin from './componants/Signin';
 import Categories from './componants/Categories';
 import Products from './componants/Products';
 import Product from './componants/Product';
+import ForgotPassword from './componants/ForgotPassword';
+import SendCode from './componants/SendCode';
 const router = createBrowserRouter([
   {
     path: '/',
@@ -39,6 +41,14 @@ const router = createBrowserRouter([
       {
         path: '/product/:id',
         element: <Product/>
+      },
+      {
+        path: '/sendCode',
+        element: <SendCode/>
+      },
+      {
+        path: '/forgotPassword',
+        element: <ForgotPassword/>
       }
     ]
   },

@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useState } from "react"
+import { Link } from "react-router-dom";
 import { object, string } from 'yup';
 
 function Signin() {
@@ -41,6 +42,7 @@ function Signin() {
         <input type="email" name="email" onChange={handleChangeUser} />
         <input type="password" name="password" onChange={handleChangeUser} />
         <button type="submit">Submit</button>
+        <Link to={'../sendCode'}>Forgot Password</Link>
       </form>
     </>
   )

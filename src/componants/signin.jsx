@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useState } from "react"
-import { mixed, object, string } from 'yup';
+import { object, string } from 'yup';
 
 function Signin() {
   const [user, setUser] = useState([]);

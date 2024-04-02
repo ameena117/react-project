@@ -6,6 +6,7 @@ import Signup from './componants/Signup';
 import Signin from './componants/Signin';
 import Categories from './componants/Categories';
 import Products from './componants/Products';
+import Product from './componants/Product';
 const router = createBrowserRouter([
   {
     path: '/',
@@ -32,8 +33,12 @@ const router = createBrowserRouter([
         element: <Signin />
       },
       {
-        path: '/Products/:id',
+        path: '/products/:id',
         element: <Products />
+      },
+      {
+        path: '/product/:id',
+        element: <Product/>
       }
     ]
   },

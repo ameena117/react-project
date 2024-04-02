@@ -7,7 +7,6 @@ const Categories = () => {
         const resp = await fetch(`${import.meta.env.VITE_URL}/categories/active?page=1&limit=100`);
         const data = await resp.json();
         setCategories(data.categories);
-        // console.log(categories);
     }
 
     useEffect(() => {
@@ -17,7 +16,7 @@ const Categories = () => {
         <div>
             <div className="categories">
                 {categories.map(category => (
-                    <Link to={`./Products/${category._id}`} className="category" key={category._id}>
+                    <Link to={`./products/${category._id}`} className="category" key={category._id}>
                         <img src={category.image.secure_url} alt={category.name} width={"55px"} />
                     </Link>
                 ))}

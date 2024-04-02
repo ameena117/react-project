@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const Categories = () => {
     const [categories, setCategories] = useState([]);
     const getCategories = async () => {
-        const resp = await fetch('https://ecommerce-node4.vercel.app/categories/active?page=1&limit=100');
+        const resp = await fetch(`${import.meta.env.VITE_URL}/categories/active?page=1&limit=100`);
         const data = await resp.json();
         setCategories(data.categories);
         // console.log(categories);

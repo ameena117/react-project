@@ -33,6 +33,7 @@ function Signin() {
     console.log(validation);
     const { data } = await axios.post(`${import.meta.env.VITE_URL}/auth/signin`, {email: user.email, password:user.password})
     console.log(data);
+    localStorage.setItem('user',data.token);
   };
   return (
     <>

@@ -35,6 +35,7 @@ function Signup() {
     }
     catch (err) {
       console.log(err.errors);
+      console.log(err.message);
       return false;
     }
   };
